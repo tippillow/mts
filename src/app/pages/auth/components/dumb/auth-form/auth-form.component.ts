@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 import {FormControl, FormGroup, Validators} from '@angular/forms';
 
 @Component({
@@ -7,6 +7,7 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
     styleUrls: ['./auth-form.component.css']
 })
 export class AuthFormComponent implements OnInit {
+    @Input() errorMessage: string;
 
     @Output() login: EventEmitter<any> = new EventEmitter<any>();
 

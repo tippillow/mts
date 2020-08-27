@@ -1,1 +1,4 @@
-<app-auth-form (login)="login($event)"></app-auth-form>
+<app-auth-form
+    [errorMessage]="errorMessage$ | async"
+    (login)="login($event)"
+></app-auth-form>

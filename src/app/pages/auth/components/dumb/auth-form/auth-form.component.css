@@ -46,3 +46,15 @@
 
     cursor: pointer;
 }
+
+.invalid {
+    border: 1px solid #e30613;
+}
+
+.error {
+    color: #e30613;
+}
+
+.disabled {
+    background-color: #aeaeae;
+}

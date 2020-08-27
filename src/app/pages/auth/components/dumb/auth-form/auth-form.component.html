@@ -5,13 +5,29 @@
         <h1 class="title">Вход</h1>
 
         <div>
-            <input class="input" type="text" name="" formControlName="username" placeholder="Username">
+            <input
+                formControlName="username"
+                [class.invalid]="!authForm.controls['username'].valid"
+                class="input"
+                type="text"
+                placeholder="Username">
         </div>
 
         <div>
-            <input class="input" type="password" name="" formControlName="password" placeholder="Password">
+            <input
+                formControlName="password"
+                [class.invalid]="!authForm.controls['password'].valid"
+                class="input"
+                type="password"
+                placeholder="Password">
         </div>
 
-        <button (click)="signIn()" class="sign-in">Войти</button>
+        <p *ngIf="errorMessage" class="error">{{errorMessage}}</p>
+
+        <button
+            [class.disabled]="!authForm.valid"
+            (click)="signIn()"
+            class="sign-in"
+            [disabled]="!authForm.valid">Войти</button>
     </div>
 </form>
