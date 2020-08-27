@@ -1,0 +1,17 @@
+<form class="form" [formGroup]="authForm">
+
+
+    <div>
+        <h1 class="title">Вход</h1>
+
+        <div>
+            <input class="input" type="text" name="" formControlName="username" placeholder="Username">
+        </div>
+
+        <div>
+            <input class="input" type="password" name="" formControlName="password" placeholder="Password">
+        </div>
+
+        <button (click)="signIn()" class="sign-in">Войти</button>
+    </div>
+</form>
