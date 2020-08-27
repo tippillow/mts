@@ -1,3 +1,5 @@
+<input class="input" type="search" [(ngModel)]="searchUser" placeholder="search">
+
 <table class="table">
     <thead>
     <tr>
@@ -7,7 +9,7 @@
     </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let user of usersList">
+    <tr *ngFor="let user of usersList | search:searchUser">
         <th scope="row">{{user?.id}}</th>
         <td>{{user?.user}}</td>
         <td>{{user?.data}}</td>

@@ -9,6 +9,8 @@ import {IUser} from '../../../../../interfaces/user';
 export class TableComponent implements OnInit {
     @Input() usersList: IUser[];
 
+    public searchUser = '';
+
     constructor() {
     }
 
